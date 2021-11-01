@@ -61,11 +61,7 @@ int main()
             pair <int,long long> sp = getbit(c);
             long long cp = f[i - 1] - (sp.second - 1LL * c * max(0,sp.first - (u[i] - 1)));
             ans = min(ans,cp + tmp);
-            // cout << c << " " << sp.first << " " << sp.second << "\n";
-            // cout << cp + tmp << "\n";
             for (auto x : V[i]) update(x,x);
-            // for (auto x : V[i]) cout << x << " "; cout << "\n";
-            // cout << "==========================\n";
         }
     }
     cout << ans;
